@@ -18,19 +18,16 @@ main:
 	      li 	$t5, 48		# ASCII("0") = 48
         li 	$t6, 49		# ASCII("1") = 49
 
-	      la   	$t1, values 	# t1 enthaelt Zeiger auf Stellenwert
+	      la  $t1, values 	# t1 enthaelt Zeiger auf Stellenwert
         li 	$t7, 0		# Initialisiere Ergebnis
 
 nextCh: # ==============================
         # Fuegen Sie hier Ihre Loesung ein
         # ==============================
-
-
-
-
-
-
-
+        lb   $t0, $a0
+        beqz $t0, strEnd
+        beq  $t0, $t5, null
+        beq  $t0, $t6, eins
 
 
         # ==============================
@@ -45,14 +42,7 @@ eins:				# Bit war 1
         # ==============================
         # Fuegen Sie hier Ihre Loesung ein
         # ==============================
-
-
-
-
-
-
-
-
+        add $t7, $t7, $t1
 
         # ==============================
         # Ende Ihrer Loesung
